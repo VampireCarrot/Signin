@@ -23,7 +23,7 @@
 	<!-- <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" 
 		/> -->
 	<Resource 
-	    name="jdbc/lwd"
+	    name="jdbc/SignIn"
 	    auth="Container"
 	    type="javax.sql.DataSource"
 		maxActive="100" 

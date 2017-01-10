@@ -9,7 +9,9 @@
 <body>
 	<form  method="post" action="UserLoginServlet">
     <label for="myName">请输入手机号：</label>
-    <input type="text" value="" name="User_tel" />
+    <input type="text" value="" name="User_tel" /></br>
+    <label for="myName">请输入密     码：</label>
+    <input type="text" value="" name="User_pwd" /></br>
     <input type="submit" value="提交" name="submit" />
 </body>
 </html>

@@ -15,4 +15,11 @@ public class IUserServiceImpl implements IUserService{
 		return user=user==null?new UserInfo():user ;
 	}
 
+	@Override
+	public UserInfo loginByPhoneNum(String phoneNum, String password) throws Exception {
+		// TODO Auto-generated method stub
+		this.user = DaoFactory.getUserDaoInstance().loginByPhoneNum(phoneNum,password);
+		return user=user==null?new UserInfo():user ;
+	}
+
 }

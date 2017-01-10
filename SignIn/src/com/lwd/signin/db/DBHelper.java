@@ -21,7 +21,7 @@ public class DBHelper {
 			Context ctxt;
 			try {
 				ctxt = new InitialContext();
-				DataSource datas = (DataSource) ctxt.lookup("java:comp/env/jdbc/lwd");
+				DataSource datas = (DataSource) ctxt.lookup("java:comp/env/jdbc/SignIn");
 				;
 				this.con = datas.getConnection();
 			} catch (NamingException ne) {

@@ -20,6 +20,13 @@ public interface IUserDao {
 	 */
 	public UserInfo selectByPhoneNum(String phoneNum) throws Exception;
 	/**
+	 * 根据手机号登陆
+	 * @param phoneNum
+	 * @return
+	 * @throws Exception
+	 */
+	public UserInfo loginByPhoneNum(String phoneNum,String password) throws Exception;
+	/**
 	 * 根据用户名和密码查询用户
 	 * @param phonenumber
 	 * @return

@@ -10,4 +10,12 @@ public interface IUserService {
 	 * @throws Exception
 	 */
 	public UserInfo selectByPhoneNum(String phoneNum) throws Exception;
+	/**
+	 * 根据手机号码登陆
+	 * @param phoneNum
+	 * @return
+	 * @throws Exception
+	 */
+	public UserInfo loginByPhoneNum(String phoneNum,String password) throws Exception;
+	
 }

@@ -52,17 +52,18 @@ public class UserLoginServlet extends HttpServlet{
 		 */
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			// TODO Auto-generated method stub
-
+			response.setCharacterEncoding("UTF-8");
 			// 声明输出对象
 			PrintWriter out = response.getWriter();
 
 			// 提取表单数据
 			String User_tel = request.getParameter("User_tel");
+			String User_pwd = request.getParameter("User_pwd");
 
 
 			// 调用ServiceFactory
 			try {
-				resultUser = ServiceFactory.getUserServiceInstance().selectByPhoneNum(User_tel);
+				resultUser = ServiceFactory.getUserServiceInstance().loginByPhoneNum(User_tel,User_pwd);
 				if (resultUser != null) {
 					msg = "result: login succeed by phoneNum and password!";
 				} else {
@@ -78,7 +79,7 @@ public class UserLoginServlet extends HttpServlet{
 			// 把结果转成json字符串
 			Gson gson = new Gson();
 			String gstr = gson.toJson(resultUser);
-
+			System.out.println(gstr);
 			// 返回给移动端
 			out.print(gstr);
 			out.flush();
